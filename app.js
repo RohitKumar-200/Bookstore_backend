@@ -25,7 +25,12 @@ mongoose
 //Middlewares
 app.use(bodyParser.json());
 app.use(cookieParser());
-app.use(cors());
+app.use(
+  cors({
+    credentials: true,
+    origin: ["http://localhost:3000", "https://bookshlf-in.web.app"],
+  })
+);
 
 //My Routes
 app.get("/", (req, res) => res.send("Hello Bookstore"));
