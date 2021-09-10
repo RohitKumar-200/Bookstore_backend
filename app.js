@@ -28,7 +28,7 @@ app.use(cookieParser());
 app.use(cors());
 
 //My Routes
-app.get("/", (req, res) => res.send("Hello Bookshlf"));
+app.get("/", (req, res) => res.send("Hello Bookstore"));
 app.use("/", authRoutes);
 app.use("/", accountRoutes);
 
