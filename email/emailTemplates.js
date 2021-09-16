@@ -177,10 +177,10 @@ style="font-family: sans-serif"
                 All rights reserved Bookstore <br />
                 If you have any issues, please don't hesitate to contact us at
                 <a
-                  href="mailto:contact@bookstore-in.outlook.com"
+                  href="mailto:contact@bookstore"
                   target="_blank"
                   style="color: #31bff7"
-                  >contact@bookstore-in.outlook.com</a
+                  >contact@bookstore</a
                 >
               </p>
             </td>
@@ -382,10 +382,10 @@ style="font-family: sans-serif"
                 All rights reserved Bookstore <br />
                 If you have any issues, please don't hesitate to contact us at
                 <a
-                  href="mailto:contact@bookstore-in.outlook.com"
+                  href="mailto:contact@bookstore"
                   target="_blank"
                   style="color: #31bff7"
-                  >contact@bookstore-in.outlook.com</a
+                  >contact@bookstore</a
                 >
               </p>
             </td>
@@ -587,10 +587,10 @@ style="font-family: sans-serif"
                 All rights reserved Bookstore <br />
                 If you have any issues, please don't hesitate to contact us at
                 <a
-                  href="mailto:contact@bookstore-in.outlook.com"
+                  href="mailto:contact@bookstore"
                   target="_blank"
                   style="color: #31bff7"
-                  >contact@bookstore-in.outlook.com</a
+                  >contact@bookstore</a
                 >
               </p>
             </td>
@@ -791,10 +791,10 @@ style="font-family: sans-serif"
                 All rights reserved Bookstore <br />
                 If you have any issues, please don't hesitate to contact us at
                 <a
-                  href="mailto:contact@bookstore-in.outlook.com"
+                  href="mailto:contact@bookstore"
                   target="_blank"
                   style="color: #31bff7"
-                  >contact@bookstore-in.outlook.com</a
+                  >contact@bookstore</a
                 >
               </p>
             </td>

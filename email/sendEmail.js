@@ -6,7 +6,7 @@ const sendEmail = async (subject, html, recieverEmail) => {
   const message = {
     to: recieverEmail,
     from: {
-      name: "Bookshlf.in",
+      name: "Bookstore",
       email: "bookshlf.official@gmail.com",
     },
     subject,
