@@ -6,10 +6,7 @@ const app = express();
 const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
 const cors = require("cors");
-
-//My routes
-const authRoutes = require("./routes/auth");
-const accountRoutes = require("./routes/account");
+const routes = require("./routes");
 
 mongoose
   .connect(process.env.DATABASE, {
@@ -28,14 +25,13 @@ app.use(cookieParser());
 app.use(
   cors({
     credentials: true,
-    origin: ["http://localhost:3000", "https://bookshlf-in.web.app"],
+    origin: ["http://localhost:3000", "https://bookstore-in.web.app"],
   })
 );
 
 //My Routes
 app.get("/", (req, res) => res.send("Hello Bookstore"));
-app.use("/", authRoutes);
-app.use("/", accountRoutes);
+app.use("/", routes);
 
 //PORT
 const port = process.env.PORT || 4000;

@@ -15,7 +15,7 @@ style="font-family: sans-serif"
           <tr>
             <td align="left" width="75%">
               <span style="color: #8bc86b; font-weight: 600; font-size: 18px"
-                >BookShlf</span
+                >Bookstore</span
               >
             </td>
             <td align="right">
@@ -24,11 +24,11 @@ style="font-family: sans-serif"
                   <tr>
                     <td>
                       <a
-                        href="https://www.facebook.com/Bookshlf-109479771200918"
+                        href=""
                         target="_blank"
                       >
                         <img
-                          src="https://img.bookshlf.in/social/facebook-square.png"
+                          src="https://rohitkumar-200.github.io/bookstore_images/social/facebook-square.png"
                           alt="Facebook"
                           width="32"
                           height="32"
@@ -42,11 +42,11 @@ style="font-family: sans-serif"
                     </td>
                     <td>
                       <a
-                        href="https://www.instagram.com/_bookshlf/"
+                        href="#"
                         target="_blank"
                       >
                         <img
-                          src="https://img.bookshlf.in/social/instagram-square.png"
+                          src="https://rohitkumar-200.github.io/bookstore_images/social/instagram-square.png"
                           alt="instagram"
                           width="32"
                           height="32"
@@ -60,11 +60,11 @@ style="font-family: sans-serif"
                     </td>
                     <td>
                       <a
-                        href="https://www.youtube.com/channel/UCvZJWq7cQ4-cGJFsCWIppGQ"
+                        href="#"
                         target="_blank"
                       >
                         <img
-                          src="https://img.bookshlf.in/social/youtube-square.png"
+                          src="https://rohitkumar-200.github.io/bookstore_images/social/youtube-square.png"
                           alt="youtube"
                           width="32"
                           height="32"
@@ -89,8 +89,8 @@ style="font-family: sans-serif"
           <tr>
             <td align="center" style="padding-top: 20px">
               <img
-                src="https://img.bookshlf.in/logo/smallLogo.png"
-                alt="Bookshlf Logo"
+                src="https://rohitkumar-200.github.io/bookstore_images/logo/smallLogo.png"
+                alt="Bookstore Logo"
                 height="200"
                 width="200"
                 style="display: block"
@@ -108,7 +108,7 @@ style="font-family: sans-serif"
               "
             >
               WELCOME TO<br />
-              BOOKSHLF
+              BOOKSTORE
             </td>
           </tr>
           <tr>
@@ -136,7 +136,7 @@ style="font-family: sans-serif"
           </tr>
           <tr>
             <td align="center" style="padding-top: 20px">
-              <a href="https://bookshlf.in/" target="_blank">
+              <a href="https://bookstore-in.web.app/" target="_blank">
                 <button
                   style="
                     background: #8bc86b;
@@ -174,13 +174,13 @@ style="font-family: sans-serif"
                   padding: 10px;
                 "
               >
-                All rights reserved BookShlf <br />
+                All rights reserved Bookstore <br />
                 If you have any issues, please don't hesitate to contact us at
                 <a
-                  href="mailto:contact@bookshlf.in"
+                  href="mailto:contact@bookstore-in.outlook.com"
                   target="_blank"
                   style="color: #31bff7"
-                  >contact@bookshlf.in</a
+                  >contact@bookstore-in.outlook.com</a
                 >
               </p>
             </td>
@@ -221,7 +221,7 @@ style="font-family: sans-serif"
           <tr>
             <td align="left" width="75%">
               <span style="color: #8bc86b; font-weight: 600; font-size: 18px"
-                >BookShlf</span
+                >Bookstore</span
               >
             </td>
             <td align="right">
@@ -230,11 +230,11 @@ style="font-family: sans-serif"
                   <tr>
                     <td>
                       <a
-                        href="https://www.facebook.com/Bookshlf-109479771200918"
+                        href="#"
                         target="_blank"
                       >
                         <img
-                          src="https://img.bookshlf.in/social/facebook-square.png"
+                          src="https://rohitkumar-200.github.io/bookstore_images/social/facebook-square.png"
                           alt="Facebook"
                           width="32"
                           height="32"
@@ -248,11 +248,11 @@ style="font-family: sans-serif"
                     </td>
                     <td>
                       <a
-                        href="https://www.instagram.com/_bookshlf/"
+                        href="#"
                         target="_blank"
                       >
                         <img
-                          src="https://img.bookshlf.in/social/instagram-square.png"
+                          src="https://rohitkumar-200.github.io/bookstore_images/social/instagram-square.png"
                           alt="instagram"
                           width="32"
                           height="32"
@@ -266,11 +266,11 @@ style="font-family: sans-serif"
                     </td>
                     <td>
                       <a
-                        href="https://www.youtube.com/channel/UCvZJWq7cQ4-cGJFsCWIppGQ"
+                        href="#"
                         target="_blank"
                       >
                         <img
-                          src="https://img.bookshlf.in/social/youtube-square.png"
+                          src="https://rohitkumar-200.github.io/bookstore_images/social/youtube-square.png"
                           alt="youtube"
                           width="32"
                           height="32"
@@ -295,8 +295,8 @@ style="font-family: sans-serif"
           <tr>
             <td align="center" style="padding-top: 20px">
               <img
-                src="https://img.bookshlf.in/logo/smallLogo.png"
-                alt="Bookshlf Logo"
+                src="https://rohitkumar-200.github.io/bookstore_images/logo/smallLogo.png"
+                alt="Bookstore Logo"
                 height="100"
                 width="100"
                 style="display: block"
@@ -313,7 +313,7 @@ style="font-family: sans-serif"
                 color: #484848;
               "
             >
-              BOOKSHLF
+              BOOKSTORE
             </td>
           </tr>
           <tr>
@@ -353,8 +353,8 @@ style="font-family: sans-serif"
                   border-radius: 4px;
                   letter-spacing: 15px;
                 "
-                id="bookshlfOtpButton"
-                onclick="navigator.clipboard.writeText(document.getElementById('bookshlfOtpButton').innerText)"
+                id="bookstoreOtpButton"
+                onclick="navigator.clipboard.writeText(document.getElementById('bookstoreOtpButton').innerText)"
               >
                 ${otp}
               </button>
@@ -379,13 +379,13 @@ style="font-family: sans-serif"
                   padding: 10px;
                 "
               >
-                All rights reserved BookShlf <br />
+                All rights reserved Bookstore <br />
                 If you have any issues, please don't hesitate to contact us at
                 <a
-                  href="mailto:contact@bookshlf.in"
+                  href="mailto:contact@bookstore-in.outlook.com"
                   target="_blank"
                   style="color: #31bff7"
-                  >contact@bookshlf.in</a
+                  >contact@bookstore-in.outlook.com</a
                 >
               </p>
             </td>
@@ -426,7 +426,7 @@ style="font-family: sans-serif"
           <tr>
             <td align="left" width="75%">
               <span style="color: #8bc86b; font-weight: 600; font-size: 18px"
-                >BookShlf</span
+                >Bookstore</span
               >
             </td>
             <td align="right">
@@ -435,11 +435,11 @@ style="font-family: sans-serif"
                   <tr>
                     <td>
                       <a
-                        href="https://www.facebook.com/Bookshlf-109479771200918"
+                        href="#"
                         target="_blank"
                       >
                         <img
-                          src="https://img.bookshlf.in/social/facebook-square.png"
+                          src="https://rohitkumar-200.github.io/bookstore_images/social/facebook-square.png"
                           alt="Facebook"
                           width="32"
                           height="32"
@@ -453,11 +453,11 @@ style="font-family: sans-serif"
                     </td>
                     <td>
                       <a
-                        href="https://www.instagram.com/_bookshlf/"
+                        href="#"
                         target="_blank"
                       >
                         <img
-                          src="https://img.bookshlf.in/social/instagram-square.png"
+                          src="https://rohitkumar-200.github.io/bookstore_images/social/instagram-square.png"
                           alt="instagram"
                           width="32"
                           height="32"
@@ -471,11 +471,11 @@ style="font-family: sans-serif"
                     </td>
                     <td>
                       <a
-                        href="https://www.youtube.com/channel/UCvZJWq7cQ4-cGJFsCWIppGQ"
+                        href="#"
                         target="_blank"
                       >
                         <img
-                          src="https://img.bookshlf.in/social/youtube-square.png"
+                          src="https://rohitkumar-200.github.io/bookstore_images/social/youtube-square.png"
                           alt="youtube"
                           width="32"
                           height="32"
@@ -500,8 +500,8 @@ style="font-family: sans-serif"
           <tr>
             <td align="center" style="padding-top: 20px">
               <img
-                src="https://img.bookshlf.in/logo/smallLogo.png"
-                alt="Bookshlf Logo"
+                src="https://rohitkumar-200.github.io/bookstore_images/logo/smallLogo.png"
+                alt="Bookstore Logo"
                 height="100"
                 width="100"
                 style="display: block"
@@ -518,7 +518,7 @@ style="font-family: sans-serif"
                 color: #484848;
               "
             >
-              BOOKSHLF
+              BOOKSTORE
             </td>
           </tr>
           <tr>
@@ -558,8 +558,8 @@ style="font-family: sans-serif"
                   border-radius: 4px;
                   letter-spacing: 15px;
                 "
-                id="bookshlfOtpButton"
-                onclick="navigator.clipboard.writeText(document.getElementById('bookshlfOtpButton').innerText)"
+                id="bookstoreOtpButton"
+                onclick="navigator.clipboard.writeText(document.getElementById('bookstoreOtpButton').innerText)"
               >
                 ${otp}
               </button>
@@ -584,13 +584,13 @@ style="font-family: sans-serif"
                   padding: 10px;
                 "
               >
-                All rights reserved BookShlf <br />
+                All rights reserved Bookstore <br />
                 If you have any issues, please don't hesitate to contact us at
                 <a
-                  href="mailto:contact@bookshlf.in"
+                  href="mailto:contact@bookstore-in.outlook.com"
                   target="_blank"
                   style="color: #31bff7"
-                  >contact@bookshlf.in</a
+                  >contact@bookstore-in.outlook.com</a
                 >
               </p>
             </td>
@@ -631,7 +631,7 @@ style="font-family: sans-serif"
           <tr>
             <td align="left" width="75%">
               <span style="color: #8bc86b; font-weight: 600; font-size: 18px"
-                >BookShlf</span
+                >Bookstore</span
               >
             </td>
             <td align="right">
@@ -640,11 +640,11 @@ style="font-family: sans-serif"
                   <tr>
                     <td>
                       <a
-                        href="https://www.facebook.com/Bookshlf-109479771200918"
+                        href="#"
                         target="_blank"
                       >
                         <img
-                          src="https://img.bookshlf.in/social/facebook-square.png"
+                          src="https://rohitkumar-200.github.io/bookstore_images/social/facebook-square.png"
                           alt="Facebook"
                           width="32"
                           height="32"
@@ -658,11 +658,11 @@ style="font-family: sans-serif"
                     </td>
                     <td>
                       <a
-                        href="https://www.instagram.com/_bookshlf/"
+                        href="#"
                         target="_blank"
                       >
                         <img
-                          src="https://img.bookshlf.in/social/instagram-square.png"
+                          src="https://rohitkumar-200.github.io/bookstore_images/social/instagram-square.png"
                           alt="instagram"
                           width="32"
                           height="32"
@@ -676,11 +676,11 @@ style="font-family: sans-serif"
                     </td>
                     <td>
                       <a
-                        href="https://www.youtube.com/channel/UCvZJWq7cQ4-cGJFsCWIppGQ"
+                        href="#"
                         target="_blank"
                       >
                         <img
-                          src="https://img.bookshlf.in/social/youtube-square.png"
+                          src="https://rohitkumar-200.github.io/bookstore_images/social/youtube-square.png"
                           alt="youtube"
                           width="32"
                           height="32"
@@ -705,8 +705,8 @@ style="font-family: sans-serif"
           <tr>
             <td align="center" style="padding-top: 20px">
               <img
-                src="https://img.bookshlf.in/logo/smallLogo.png"
-                alt="Bookshlf Logo"
+                src="https://rohitkumar-200.github.io/bookstore_images/logo/smallLogo.png"
+                alt="Bookstore Logo"
                 height="100"
                 width="100"
                 style="display: block"
@@ -723,7 +723,7 @@ style="font-family: sans-serif"
                 color: #484848;
               "
             >
-              BOOKSHLF
+              BOOKSTORE
             </td>
           </tr>
           <tr>
@@ -750,7 +750,7 @@ style="font-family: sans-serif"
           </tr>
           <tr>
             <td align="center" style="padding-top: 20px">
-                <a href="https://bookshlf.in/" target="_blank">
+                <a href="https://bookstore-in.web.app/" target="_blank">
                     <button
                     style="
                         background: #8bc86b;
@@ -788,13 +788,13 @@ style="font-family: sans-serif"
                   padding: 10px;
                 "
               >
-                All rights reserved BookShlf <br />
+                All rights reserved Bookstore <br />
                 If you have any issues, please don't hesitate to contact us at
                 <a
-                  href="mailto:contact@bookshlf.in"
+                  href="mailto:contact@bookstore-in.outlook.com"
                   target="_blank"
                   style="color: #31bff7"
-                  >contact@bookshlf.in</a
+                  >contact@bookstore-in.outlook.com</a
                 >
               </p>
             </td>

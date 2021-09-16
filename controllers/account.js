@@ -1,10 +1,9 @@
 const { EMAIL_VERIFICATION, PASSWORD_RESET } = require("../email/otp.types");
 const EmailOtp = require("../models/emailOtps");
-const User = require("../models/users");
+const Users = require("../models/users");
 const sendEmailOtp = require("../email/sendEmailOtp");
 const { v1: uuidv1 } = require("uuid");
 const crypto = require("crypto");
-const { validationResult } = require("express-validator");
 const sendEmail = require("../email/sendEmail");
 const {
   welcomeEmailTemplate,
@@ -12,16 +11,30 @@ const {
 } = require("../email/emailTemplates");
 
 exports.verifyEmail = async (req, res) => {
-  const errors = validationResult(req);
+  const { email, otp } = req.body;
 
-  if (!errors.isEmpty()) {
-    return res.status(422).json({
-      error: errors.array()[0].msg,
-      errorParam: errors.array()[0].param,
+  const user = await Users.findOne({ email })
+    .select({ emailVerified: 1 })
+    .exec();
+  if (!user) {
+    return res.status(400).json({
+      errors: [
+        {
+          error: "Email does not exist",
+          param: "email",
+        },
+      ],
+    });
+  } else if (user.emailVerified == true) {
+    return res.status(400).json({
+      errors: [
+        {
+          error: "Email already verified",
+          param: "email",
+        },
+      ],
     });
   }
-
-  const { email, otp } = req.body;
 
   const updatedEmailOtp = await EmailOtp.updateMany(
     { email, type: EMAIL_VERIFICATION, count: { $lt: 5 } },
@@ -30,7 +43,7 @@ exports.verifyEmail = async (req, res) => {
 
   if (updatedEmailOtp?.nModified === 0) {
     return res.status(550).json({
-      error: "OTP verification limit exceeded, try generating new otp",
+      error: "Limit exceeded, generate new otp",
     });
   }
 
@@ -43,10 +56,15 @@ exports.verifyEmail = async (req, res) => {
         });
       } else if (!emailOtp) {
         return res.status(404).json({
-          error: "OTP entered is wrong / expired",
+          errors: [
+            {
+              error: "OTP entered is wrong / expired",
+              param: "otp",
+            },
+          ],
         });
       } else {
-        User.updateOne(
+        Users.updateOne(
           { email },
           { $set: { emailVerified: true } },
           (error) => {
@@ -55,33 +73,26 @@ exports.verifyEmail = async (req, res) => {
                 "Error occurred while updating user to email verified",
                 error
               );
+              return res.status(500).json({
+                error: "Failed to verify email",
+              });
             }
+
+            sendEmail("Welcome to Bookshlf", welcomeEmailTemplate(), email);
+            return res.json({
+              msg: "Email verified",
+            });
           }
         );
-
-        sendEmail("Welcome to Bookshlf", welcomeEmailTemplate(), email);
-
-        return res.json({
-          message: "Email verified successfully",
-        });
       }
     }
   );
 };
 
 exports.sendVerifyEmailOtp = async (req, res) => {
-  const errors = validationResult(req);
-
-  if (!errors.isEmpty()) {
-    return res.status(422).json({
-      error: errors.array()[0].msg,
-      errorParam: errors.array()[0].param,
-    });
-  }
-
   const { email } = req.body;
 
-  const user = await User.findOne({ email, emailVerified: true }, (error) => {
+  const user = await Users.findOne({ email, emailVerified: true }, (error) => {
     if (error) {
       console.log("Error finding user in verifyEmail", error);
     }
@@ -96,21 +107,24 @@ exports.sendVerifyEmailOtp = async (req, res) => {
   sendEmailOtp(EMAIL_VERIFICATION, email);
 
   return res.json({
-    message: "OTP send successfully",
+    msg: "OTP send",
   });
 };
 
 exports.resetPassword = async (req, res) => {
-  const errors = validationResult(req);
+  const { email, otp, password } = req.body;
 
-  if (!errors.isEmpty()) {
-    return res.status(422).json({
-      error: errors.array()[0].msg,
-      errorParam: errors.array()[0].param,
+  const user = await Users.findOne({ email }).select({ _id: 1 }).exec();
+  if (!user) {
+    return res.status(400).json({
+      errors: [
+        {
+          error: "Email does not exist",
+          param: "email",
+        },
+      ],
     });
   }
-
-  const { email, otp, password } = req.body;
 
   const updatedEmailOtp = await EmailOtp.updateMany(
     { email, type: PASSWORD_RESET, count: { $lt: 5 } },
@@ -119,7 +133,12 @@ exports.resetPassword = async (req, res) => {
 
   if (updatedEmailOtp?.nModified === 0) {
     return res.status(550).json({
-      error: "OTP verification limit exceeded, try generating new otp",
+      errors: [
+        {
+          error: "Limit exceeded, generate new otp",
+          param: "otp",
+        },
+      ],
     });
   }
 
@@ -130,7 +149,12 @@ exports.resetPassword = async (req, res) => {
       });
     } else if (!emailOtp) {
       return res.status(404).json({
-        error: "OTP entered is wrong / expired",
+        errors: [
+          {
+            error: "OTP entered is wrong / expired",
+            param: "otp",
+          },
+        ],
       });
     } else {
       const salt = uuidv1();
@@ -139,7 +163,7 @@ exports.resetPassword = async (req, res) => {
         .update(password)
         .digest("hex");
 
-      User.updateOne({ email }, { salt, encryPassword }, (error) => {
+      Users.updateOne({ email }, { salt, encryPassword }, (error) => {
         if (error) {
           console.log("Error occurred while changing user password", error);
         }
@@ -157,25 +181,16 @@ exports.resetPassword = async (req, res) => {
       );
 
       return res.json({
-        message: "Password changed successfully",
+        msg: "Password changed",
       });
     }
   });
 };
 
 exports.sendResetPasswordOtp = async (req, res) => {
-  const errors = validationResult(req);
-
-  if (!errors.isEmpty()) {
-    return res.status(422).json({
-      error: errors.array()[0].msg,
-      errorParam: errors.array()[0].param,
-    });
-  }
-
   const { email } = req.body;
 
-  const user = await User.findOne({ email, emailVerified: true }, (error) => {
+  const user = await Users.findOne({ email, emailVerified: true }, (error) => {
     if (error) {
       console.log("Error finding user in sendResetPasswordOtp", error);
     }
@@ -183,13 +198,30 @@ exports.sendResetPasswordOtp = async (req, res) => {
 
   if (!user) {
     return res.status(400).json({
-      error: "No account found",
+      error: "Account not found",
     });
   }
 
   sendEmailOtp(PASSWORD_RESET, email);
 
   return res.json({
-    message: "OTP send successfully",
+    msg: "OTP send",
+  });
+};
+
+exports.getUserProfile = (req, res) => {
+  const query = Users.findOne({ _id: req.auth._id }).select({
+    _id: 0,
+    name: 1,
+    roles: 1,
+    email: 1,
+    createdAt: 1,
+  });
+  query.exec((error, user) => {
+    if (error) {
+      console.log("Error finding user in getUserProfile", error);
+      return res.status(500).json({ error: "Some error occurred" });
+    }
+    res.json(user);
   });
 };
