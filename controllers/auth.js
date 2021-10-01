@@ -1,4 +1,5 @@
 const Users = require("../models/users");
+const SellerProfiles = require("../models/sellerProfiles");
 const jwt = require("jsonwebtoken");
 const expressJwt = require("express-jwt");
 const sendEmailOtp = require("../email/sendEmailOtp");
@@ -154,4 +155,40 @@ exports.isAdmin = (req, res, next) => {
     }
     next();
   });
+};
+
+exports.isSeller = (req, res, next) => {
+  const query = SellerProfiles.findOne({ userId: req.auth._id }).select({
+    _id: 1,
+  });
+  query.exec((error, sellerProfile) => {
+    if (error || !sellerProfile) {
+      return res.status(403).json({
+        error: "You are not a seller",
+      });
+    }
+    req.auth.sellerId = sellerProfile._id;
+    next();
+  });
+};
+
+exports.getSellerAuth = async (req, res, next) => {
+  if (!req.auth?._id) {
+    next();
+  } else {
+    try {
+      const sellerProfile = await SellerProfiles.findOne({
+        userId: req.auth._id,
+      })
+        .select({
+          _id: 1,
+        })
+        .exec();
+      req.auth.sellerId = sellerProfile._id;
+      next();
+    } catch (error) {
+      console.log("Error finding sellerId in getSellerAuth ", error);
+      res.status(500).json({ error: "Some error occurred" });
+    }
+  }
 };
