@@ -89,7 +89,7 @@ exports.search = async (req, res) => {
     let searchResults = await Books.aggregate([
       {
         $search: {
-          index: "Books",
+          index: "default",
           text: { query: req.query.q, path: { wildcard: "*" } },
         },
       },
