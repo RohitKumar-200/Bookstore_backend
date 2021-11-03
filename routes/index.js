@@ -16,6 +16,11 @@ const orderRoutes = require("./order");
 const checkoutRoutes = require("./checkout");
 const reviewRoutes = require("./review");
 const tagRoutes = require("./tag");
+const adminBookRoutes = require("./adminBook");
+const adminMessageRoutes = require("./adminMessage");
+const adminSellerRoutes = require("./adminSeller");
+const adminUserRoutes = require("./adminUser");
+const adminOrderRoutes = require("./adminOrder");
 
 router.use("/", authRoutes);
 router.use("/", accountRoutes);
@@ -32,5 +37,10 @@ router.use("/", orderRoutes);
 router.use("/", checkoutRoutes);
 router.use("/", reviewRoutes);
 router.use("/", tagRoutes);
+router.use("/", adminBookRoutes);
+router.use("/", adminMessageRoutes);
+router.use("/", adminSellerRoutes);
+router.use("/", adminUserRoutes);
+router.use("/", adminOrderRoutes);
 
 module.exports = router;
